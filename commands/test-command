@@ -1,0 +1,20 @@
+---
+description: Test slash command demonstrating key features
+argument-hint: [optional-message]
+model: claude-3-5-haiku-20241022
+---
+
+This is a test slash command!
+
+**Your message**: $ARGUMENTS
+
+Here's what this command demonstrates:
+1. **Frontmatter** - Sets description, argument hints, and model
+2. **Arguments** - Captures your input using $ARGUMENTS
+3. **Markdown formatting** - Full markdown support for structured prompts
+
+This command is stored at: `~/.claude/commands/test-command`
+
+To use it, try:
+- `/test-command` - runs with no arguments
+- `/test-command hello world` - passes "hello world" as arguments
