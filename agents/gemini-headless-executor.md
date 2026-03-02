@@ -1,7 +1,7 @@
 ---
-name: gemini-refactor-executor
+name: gemini-headless-executor
 description: "Use this agent when you need to execute a specific part of a refactor plan by delegating the actual code changes to Gemini CLI. This is a subagent designed to be called by a master refactor orchestration agent. It takes a refactor plan section (e.g., 'codebase refactor' or 'tests refactor') and executes it via Gemini in headless mode.\\n\\nExamples:\\n\\n<example>\\nContext: A master refactor agent has a plan and needs to execute the codebase refactor section.\\nmaster agent: \"Execute the codebase refactor section from the plan in /docs/refactor-plan.md\"\\nassistant: \"I'll use the gemini-refactor-executor agent to execute the codebase refactor section of the plan.\"\\n<Task tool call to gemini-refactor-executor with the codebase refactor instructions>\\n</example>\\n\\n<example>\\nContext: A master agent needs to execute the tests refactor after codebase changes are complete.\\nmaster agent: \"Now execute the tests refactor section\"\\nassistant: \"I'll delegate the tests refactor execution to the gemini-refactor-executor agent.\"\\n<Task tool call to gemini-refactor-executor with the tests refactor instructions>\\n</example>\\n\\n<example>\\nContext: User directly provides inline refactor instructions without a plan file.\\nuser: \"Execute this refactor: Rename all instances of 'UserManager' to 'UserService' across the src/ directory\"\\nassistant: \"I'll use the gemini-refactor-executor agent to execute this rename refactor via Gemini.\"\\n<Task tool call to gemini-refactor-executor with the rename instructions>\\n</example>"
-tools: Bash, Glob, Grep, Read, Edit, Write, NotebookEdit, WebFetch, TodoWrite, WebSearch, ListMcpResourcesTool, ReadMcpResourceTool
+tools: Bash, Glob, Grep, Read
 model: haiku
 color: pink
 ---

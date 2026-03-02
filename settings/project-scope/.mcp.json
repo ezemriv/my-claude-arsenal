@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "trello": {
+      "command": "bunx",
+      "args": ["@delorenj/mcp-server-trello"],
+      "env": {
+        "TRELLO_API_KEY": "xxx",
+        "TRELLO_TOKEN": "xxx",
+        "TRELLO_BOARD_ID": "xxx",
+        "TRELLO_WORKSPACE_ID": "xxx"
+      }
+    },
+    "notebooklm": {
+      "command": "npx",
+      "args": ["notebooklm-mcp@latest"]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
+    }
+  }
+}

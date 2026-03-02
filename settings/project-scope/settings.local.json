@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__notebooklm__*",
+      "mcp__context7__*"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "context7",
+    "notebooklm"
+  ],
+  "disabledMcpServers": [
+    "github",
+    "trello"
+  ]
+}
